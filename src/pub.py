@@ -3,7 +3,7 @@ class Pub:
     def __init__(self, name, till):
         self.name = name
         self.till = till
-        self.drinks = []
+        self.drinks = {}
 
     def check_age_and_drunkenness(self, customer):
         if customer.age >= 18 and customer.drunkenness_level < 10:

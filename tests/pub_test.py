@@ -8,6 +8,12 @@ class TestPub(unittest.TestCase):
     def setUp(self):
         self.pub = Pub("The Prancing Pony", 100)
         self.customer = Customer("Bruce", 50, 30, 0)
+        self.pub.drinks = {
+            "Beer": 20,
+            "Ginandtonic": 10,
+            "Rum": 40,
+            "Vodka": 10
+        }
 
     def test_pub_has_name(self):
         self.assertEqual("The Prancing Pony", self.pub.name)
@@ -24,6 +30,7 @@ class TestPub(unittest.TestCase):
     def test_drunkenness_level(self):
         self.assertEqual(0, self.customer.drunkenness_level)
 
+    
         # def test_buy_drink(self):
         # customer = Customer("Bruce", 50, 30)
         # drink = Drink("beer", 5)
